@@ -45,8 +45,8 @@ function func1(){
 
   return (
     <>
-      <Component1 object={names}/>
-      {/* <Component1 dept={func1()} comp={<Component2 details={details}/>}/> */}
+      {/* <Component1 object={names}/> */}
+      <Component1 batch ="19" dept={func1()} comp={<Component2 details={details}/>}/>
       
       {/* <div>
         {Data.map((item, index) => (

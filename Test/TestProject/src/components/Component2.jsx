@@ -10,9 +10,9 @@ const Component2 = (props) => {
                Sl: {index }  Name: {detail.Name } Id: {detail.Id }
                {
                 detail.phone.map((phonenumber)=>
-                    <span>
+                    <div>
                         Home: { phonenumber.home } office : { phonenumber.office }
-                    </span>
+                    </div>
                 )
                }
             </div>
