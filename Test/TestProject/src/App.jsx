@@ -2,6 +2,7 @@ import Component1 from "./components/Component1"
 import Data from "./dataset/Data.json"
 import Component2 from "./components/Component2"
 import State from "./components/State"
+import ReactHook from "./components/ReactHook"
 function App() {
 
 const details=[
@@ -62,7 +63,9 @@ function func1(){
           </div>
         ))}
       </div> */}
-      <State/>
+      {/* <State/> */}
+      <ReactHook/>
+
       
     </>
   );
