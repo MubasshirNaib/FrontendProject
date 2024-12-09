@@ -1,7 +1,8 @@
-import { Button } from '@mui/material'
+import { Button ,TextField} from '@mui/material'
 import React, { useState } from 'react'
 
 const ReactHook = () => {
+const[text,setText]=useState("")
 const[count,setCount] = useState(0)
 const handleIncrement = () =>{
     setCount(prevCount => prevCount +1)
@@ -10,11 +11,16 @@ const handleIncrement = () =>{
 const handleDecrement = () =>{
     setCount(count -1)
 }
+const handleText=(e) =>{
+    setText(e.target.value)
+}
   return (
     <div>
       <div>{count}</div>
       <Button variant="outlined" onClick={handleIncrement}>Increment</Button>
       <Button variant="outlined" onClick={handleDecrement} disabled={count==0}>Decrement</Button>
+      <div>{text}</div>
+      <TextField id="standard-basic" label="input" variant="standard" onChange={handleText}/>
     </div>
   )
 }
