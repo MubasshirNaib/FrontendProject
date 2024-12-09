@@ -1,7 +1,7 @@
 import Component1 from "./components/Component1"
 import Data from "./dataset/Data.json"
 import Component2 from "./components/Component2"
-
+import State from "./components/State"
 function App() {
 
 const details=[
@@ -46,7 +46,7 @@ function func1(){
   return (
     <>
       {/* <Component1 object={names}/> */}
-      <Component1 batch ="19" dept={func1()} comp={<Component2 details={details}/>}/>
+      {/* <Component1 batch ="19" dept={func1()} comp={<Component2 details={details}/>}/> */}
       
       {/* <div>
         {Data.map((item, index) => (
@@ -62,6 +62,8 @@ function func1(){
           </div>
         ))}
       </div> */}
+      <State/>
+      
     </>
   );
 }
