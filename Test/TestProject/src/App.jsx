@@ -3,6 +3,7 @@ import Data from "./dataset/Data.json"
 import Component2 from "./components/Component2"
 import State from "./components/State"
 import ReactHook from "./components/ReactHook"
+import CrudExample from "./components/CrudExample"
 function App() {
 
 const details=[
@@ -64,7 +65,9 @@ function func1(){
         ))}
       </div> */}
       {/* <State/> */}
-      <ReactHook/>
+      {/* <ReactHook/> */}
+      home 
+      <CrudExample/>
 
       
     </>
