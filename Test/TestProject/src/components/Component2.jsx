@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { UserContext } from './UserContext';
 const Component2 = () => {
 //  const {details}= props;
- const user = useContext(UserContext);
+ const {user,text}= useContext(UserContext);
  console.log(user);
   return (
     <div>
@@ -23,6 +23,7 @@ const Component2 = () => {
       component2
       <h1>{user.id}</h1>
       <h2>{user.name}</h2>
+      <h3>{text}</h3>
     </div>
   )
 }

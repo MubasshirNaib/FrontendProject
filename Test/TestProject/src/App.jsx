@@ -48,6 +48,7 @@ function func1(){
 }
 
  const [user,setUser] = useState({id:101,name:"Mubasshir Naib"});
+ const [text,setText] = useState("Hello I am Mubasshir");
   return (
     <>
       {/* <Component1 object={names}/> */}
@@ -69,8 +70,8 @@ function func1(){
       </div> */}
       {/* <State/> */}
       {/* <ReactHook/> */}
+      <UserContext.Provider value={{user,text}}>
       home 
-      <UserContext.Provider value={user}>
       <Component1/>
       </UserContext.Provider>
       {/* <CrudExample/> */}
