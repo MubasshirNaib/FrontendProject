@@ -1,10 +1,12 @@
-import React from 'react'
-
-const Component2 = (props) => {
- const {details}= props;
+import React,{useContext} from 'react'
+import { UserContext } from './UserContext';
+const Component2 = () => {
+//  const {details}= props;
+ const user = useContext(UserContext);
+ console.log(user);
   return (
     <div>
-      {
+      {/* {
         details.map((detail,index)=>
             <div>
                Sl: {index }  Name: {detail.Name } Id: {detail.Id }
@@ -17,7 +19,10 @@ const Component2 = (props) => {
                }
             </div>
         )
-      }
+      } */}
+      component2
+      <h1>{user.id}</h1>
+      <h2>{user.name}</h2>
     </div>
   )
 }

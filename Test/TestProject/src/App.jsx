@@ -4,6 +4,9 @@ import Component2 from "./components/Component2"
 import State from "./components/State"
 import ReactHook from "./components/ReactHook"
 import CrudExample from "./components/CrudExample"
+import CrudPractice from "./components/CrudPractice"
+import { UserContext } from "./components/UserContext"
+import { useState } from "react"
 function App() {
 
 const details=[
@@ -44,7 +47,7 @@ function func1(){
   return "Department of Computer Science and Engineering";
 }
 
-
+ const [user,setUser] = useState({id:101,name:"Mubasshir Naib"});
   return (
     <>
       {/* <Component1 object={names}/> */}
@@ -67,7 +70,11 @@ function func1(){
       {/* <State/> */}
       {/* <ReactHook/> */}
       home 
-      <CrudExample/>
+      <UserContext.Provider value={user}>
+      <Component1/>
+      </UserContext.Provider>
+      {/* <CrudExample/> */}
+      {/* <CrudPractice/> */}
 
       
     </>
