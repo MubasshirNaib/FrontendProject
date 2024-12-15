@@ -1,10 +1,29 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import Data from "../dataset/Data.json"
+import {Link} from 'react-router-dom'
 const About = () => {
+  const [datas,setData] = useState(Data);
+  console.log(datas);
+  const truncateString = (str,num)=>{
+    if(str.length > num){
+        return str.slice(0,num) + "...";
+    }else{
+        return str;
+    }
+  }
   return (
     <div>
       About
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident cum officia impedit architecto, dolores perferendis distinctio ex quibusdam optio dolor culpa praesentium consequuntur tenetur laudantium natus rerum laborum iure facere.</p>
+      <section>
+        {datas.map((data)=>{
+            const{Name,Id,About}=data
+            return <article key={Id}>
+                <h3>{Name}</h3>
+                <p>{truncateString(About,5)}</p>
+                <Link to ={Name}>Details</Link>
+            </article>
+        })}
+      </section>
     </div>
   )
 }

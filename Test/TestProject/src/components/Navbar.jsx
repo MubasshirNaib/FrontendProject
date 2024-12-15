@@ -6,7 +6,8 @@ const Navbar = () => {
    <nav>
     <Link to="/">Home</Link><span>  </span>
     <Link to="/contract">Contract</Link><span> </span>
-    <Link to="/about">About</Link>
+    <Link to="/about">About</Link><span> </span>
+    {/* <Link to="/about/:Name">Details</Link> */}
    </nav>
   )
 }
