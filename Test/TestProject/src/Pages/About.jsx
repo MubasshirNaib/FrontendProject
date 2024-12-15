@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Data from "../dataset/Data.json"
-import {Link} from 'react-router-dom'
+import {Link,useLocation} from 'react-router-dom'
 const About = () => {
   const [datas,setData] = useState(Data);
   console.log(datas);
@@ -20,7 +20,7 @@ const About = () => {
             return <article key={Id}>
                 <h3>{Name}</h3>
                 <p>{truncateString(About,5)}</p>
-                <Link to ={Name}>Details</Link>
+                <Link to ={Name} state={{Id,Name,About}}>Details</Link>
             </article>
         })}
       </section>
