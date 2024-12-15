@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar"
 import Details from "./Pages/Details"
 import User from "./Pages/User"
 import Index from "./routes/Index"
+import RecoilIndex from "./recoil/recoilIndex"
 
 function App() {
 
@@ -98,7 +99,8 @@ function func1(){
               <Route path="/*" element={<Error/>}/>
           </Routes>
       </BrowserRouter> */}
-      <Index/>
+      {/* <Index/> */}
+      <RecoilIndex/>
 
       
     </>
