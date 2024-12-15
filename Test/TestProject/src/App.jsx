@@ -12,6 +12,8 @@ import Home from "./Pages/Home"
 import Contract from "./Pages/Contract"
 import About from "./Pages/About"
 import Error from "./Pages/Error"
+import Navbar from "./components/Navbar"
+
 function App() {
 
 const details=[
@@ -81,8 +83,9 @@ function func1(){
       </UserContext.Provider> */}
       {/* <CrudExample/> */}
       {/* <CrudPractice/> */}
-      Welcome
-      <BrowserRouter>
+      
+      <BrowserRouter>  
+          <Navbar/>
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/contract" element={<Contract/>}/>
