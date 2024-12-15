@@ -14,6 +14,7 @@ import About from "./Pages/About"
 import Error from "./Pages/Error"
 import Navbar from "./components/Navbar"
 import Details from "./Pages/Details"
+import User from "./Pages/User"
 
 function App() {
 
@@ -91,6 +92,7 @@ function func1(){
               <Route path="/" element={<Home/>}/>
               <Route path="/contract" element={<Contract/>}/>
               <Route path="/about" element={<About/>}/>
+              <Route path="/user" element={<User/>}/>
               <Route path="/about/:Name" element={<Details/>}/>
               <Route path="/*" element={<Error/>}/>
           </Routes>
