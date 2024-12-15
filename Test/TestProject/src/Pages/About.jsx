@@ -20,7 +20,7 @@ const About = () => {
             return <article key={Id}>
                 <h3>{Name}</h3>
                 <p>{truncateString(About,5)}</p>
-                <Link to ={Name} state={{Id,Name,About}}>Details</Link>
+                {/* <Link to ={Name} state={{Id,Name,About}}>Details</Link> */}
             </article>
         })}
       </section>

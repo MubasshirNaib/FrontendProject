@@ -15,6 +15,7 @@ import Error from "./Pages/Error"
 import Navbar from "./components/Navbar"
 import Details from "./Pages/Details"
 import User from "./Pages/User"
+import Index from "./routes/Index"
 
 function App() {
 
@@ -86,7 +87,7 @@ function func1(){
       {/* <CrudExample/> */}
       {/* <CrudPractice/> */}
       
-      <BrowserRouter>  
+      {/* <BrowserRouter>  
           <Navbar/>
           <Routes>
               <Route path="/" element={<Home/>}/>
@@ -96,7 +97,8 @@ function func1(){
               <Route path="/about/:Name" element={<Details/>}/>
               <Route path="/*" element={<Error/>}/>
           </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <Index/>
 
       
     </>
