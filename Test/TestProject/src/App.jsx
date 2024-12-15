@@ -7,6 +7,11 @@ import CrudExample from "./components/CrudExample"
 import CrudPractice from "./components/CrudPractice"
 import { UserContext } from "./components/UserContext"
 import { useState } from "react"
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./Pages/Home"
+import Contract from "./Pages/Contract"
+import About from "./Pages/About"
+import Error from "./Pages/Error"
 function App() {
 
 const details=[
@@ -70,12 +75,21 @@ function func1(){
       </div> */}
       {/* <State/> */}
       {/* <ReactHook/> */}
-      <UserContext.Provider value={{user,text}}>
+      {/* <UserContext.Provider value={{user,text}}>
       home 
       <Component1/>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
       {/* <CrudExample/> */}
       {/* <CrudPractice/> */}
+      Welcome
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/contract" element={<Contract/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/*" element={<Error/>}/>
+          </Routes>
+      </BrowserRouter>
 
       
     </>
